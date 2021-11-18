@@ -18,6 +18,7 @@ body {
     width: 100px;
     height: 50px;
     padding-left: 20px;
+    margin-left: auto;
 }
 
 .nav-links {
@@ -35,7 +36,7 @@ body {
 
 .nav-links ul li{
     display: inline;
-    margin-left: auto;
+    /* margin-left: auto; */
     font-size: 20px;
     margin: 10px;
 }
@@ -57,17 +58,23 @@ body {
     padding-bottom: 4px;
 }
 
-/* .snow {
+.snow {
     position: fixed;
-} */
+}
 
 #main {
-    overflow: hidden;
+    /* overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-gap: 20px;
+    grid-gap: 20px; */
+    display: flex;
     margin-top: 150px;
     padding-left: 150px;
+}
+
+#main .personal-info {
+    float: left;
+    justify-content: center;
 }
 
 .greeting-text{
@@ -105,7 +112,9 @@ body {
 
 
 .profile-pic {
-    margin-left: 300px;
+    margin-left: 400px;
+    display: flex;
+    float: right;
 }
 
 .profile-pic img{
@@ -115,22 +124,39 @@ body {
     border: 15px solid black;
 }
 
-/* #footer {
+#footer {
     position:absolute;
     text-align: center;
     bottom:0;
     width:100%;
     font-size: 12px;
- } */
+ }
 
-@media screen and (max-width: 630px){
-    #header{
-        width: 100%;
-        float: none;
+/* @media screen and (max-width: 630px){
+
+    .line {
+        width: 30px;
+        height: 3px;
+        background: rgb(231, 231, 229);
+        margin: 5px;
     }
 
-    #main{
-        width: 100%;
-        float: none;
+    .hamburger {
+        cursor: pointer;
     }
-}
+
+    .nav-links ul {
+        position: fixed;
+        flex-direction: column;
+        margin: 0 0 0 30%;
+        background: rgb(16, 15, 23);
+        width: 100%;
+        height: 100vh;
+    }
+
+    #main {
+        float: none;
+        flex-direction: column;
+    }
+
+} */
