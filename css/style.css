@@ -36,7 +36,6 @@ body {
 
 .nav-links ul li{
     display: inline;
-    /* margin-left: auto; */
     font-size: 20px;
     margin: 10px;
 }
@@ -63,10 +62,6 @@ body {
 }
 
 #main {
-    /* overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 20px; */
     display: flex;
     margin-top: 150px;
     padding-left: 150px;

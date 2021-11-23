@@ -94,3 +94,20 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: rgb(30, 200, 150);
 }
+
+.social-links {
+    color: blueviolet;
+    margin-left: 250px;
+    font-size: 50px;
+}
+
+.social-links h2 {
+    font-size: medium;
+    color: rgb(231, 231, 229);
+    margin-bottom: 20px;
+}
+
+.social-links li {
+    margin-bottom: 40px;
+    list-style: none;
+}
