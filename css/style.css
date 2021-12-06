@@ -11,108 +11,85 @@ body {
 
 #header {
     display: flex;
-    margin: 20px 0;
+    justify-content: space-between;
 }
 
-#llogo img {
-    width: 100px;
-    height: 50px;
-    padding-left: 20px;
-    margin-left: auto;
+#header #llogo {
+    margin: 20px;
 }
 
-.nav-links {
-    padding-right: 50px;
-    display: flex;
-    margin-left: auto;
+#header #llogo img {
+    width: 150px;
+    height: 70px;
+}
+
+#header .nav-links{
+    margin: 20px;
 }
 
 .nav-links ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
+    display: flex;
 }
 
 .nav-links ul li{
-    display: inline;
-    font-size: 20px;
-    margin: 10px;
+    padding: 20px;
+    list-style: none;
+    font-size: 25px
 }
 
 .nav-links ul li a {
     text-decoration: none;
     color: rgb(231, 231, 229);
-    justify-content: space-around;
-    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-#header .nav-links a:hover {
+#header .nav-links ul li a:hover {
     border-bottom: 2px solid purple;  
-    padding-bottom: 4px;
+    padding-bottom: 5px;
 }
 
-#header .nav-links a.is-active {
+#header .nav-links ul li a.is-active {
     border-bottom: 2px solid rgb(231, 231, 229);
-    padding-bottom: 4px;
+    padding-bottom: 5px;
 }
 
 .snow {
     position: fixed;
 }
 
+
 #main {
     display: flex;
-    margin-top: 150px;
-    padding-left: 150px;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 250px;
+    font-size: 20px;
 }
 
-#main .personal-info {
-    float: left;
-    justify-content: center;
+#personal-info div{
+    margin-bottom: 15px;
 }
 
-.greeting-text{
+#personal-info .greeting-text{
     max-width: 150px;
     max-height: 40px;
-    display: flex;
 }
 
-.greeting-text p{
+#personal-info .greeting-text p{
     background-color: rgb(28, 190, 166);
-    justify-content: center;
-    padding: 10px 22px;
-    border-radius: 20px 20px 20px 0px;
+    padding: 10px 20px;
+    font-size: 24px;
+    border-radius: 25px 25px 25px 0px;
 }
 
-.name {
-    padding-top: 10px;
+#main #contact p{
+    margin-bottom: 5px;
 }
 
-.profession {
-    padding-top: 8px;
-}
-
-#contact {
-    padding-top: 20px;
-}
-
-#contact p {
-    padding-bottom: 7px;
-}
-
-#contact i {
-    padding-right: 10px;
-}
-
-
-.profile-pic {
-    margin-left: 400px;
-}
-
-.profile-pic img{
-    max-width: 400px;
-    max-height: 260px;
+#main .profile-pic img{
+    width: 300px;
+    height: 280px;
     border-radius: 50%;
     border: 15px solid black;
 }
@@ -123,9 +100,9 @@ body {
     bottom:0;
     width:100%;
     font-size: 12px;
- }
+}
 
-/* @media screen and (max-width: 630px){
+@media screen and (max-width: 630px){
 
     .line {
         width: 30px;
@@ -134,17 +111,27 @@ body {
         margin: 5px;
     }
 
-    .hamburger {
-        cursor: pointer;
+    nav {
+        position: relative;
+        justify-content: center;
+        align-items: center;
     }
 
-    .nav-links ul {
+    .hamburger {
+        cursor: pointer;
+        position: absolute;
+        right: 5%;
+        top: 20%;
+        z-index: 2;
+    }
+
+    .links {
         position: fixed;
-        flex-direction: column;
-        margin: 0 0 0 30%;
+        /* margin: 0 0 0 30%; */
         background: rgb(16, 15, 23);
         width: 100%;
         height: 100vh;
+        flex-direction: column;
     }
 
     #main {
@@ -152,4 +139,4 @@ body {
         flex-direction: column;
     }
 
-} */
+}

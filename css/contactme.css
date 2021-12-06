@@ -11,51 +11,48 @@ body {
 
 #header {
     display: flex;
-    margin: 20px 0;
+    justify-content: space-between;
 }
 
-#llogo img {
-    width: 100px;
-    height: 50px;
-    padding-left: 20px;
-    margin-left: auto;
+#header #llogo {
+    margin: 20px;
 }
 
-.nav-links {
-    padding-right: 50px;
-    display: flex;
-    margin-left: auto;
+#header #llogo img {
+    width: 150px;
+    height: 70px;
+}
+
+#header .nav-links{
+    margin: 20px;
 }
 
 .nav-links ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
+    display: flex;
+    /* align-items: center; */
 }
 
 .nav-links ul li{
-    display: inline;
-    /* margin-left: auto; */
-    font-size: 20px;
-    margin: 10px;
+    padding: 20px;
+    list-style: none;
+    font-size: 25px
 }
 
 .nav-links ul li a {
     text-decoration: none;
     color: rgb(231, 231, 229);
-    justify-content: space-around;
-    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-#header .nav-links a:hover {
+#header .nav-links ul li a:hover {
     border-bottom: 2px solid purple;  
-    padding-bottom: 4px;
+    padding-bottom: 5px;
 }
 
-#header .nav-links a.is-active {
+#header .nav-links ul li a.is-active {
     border-bottom: 2px solid rgb(231, 231, 229);
-    padding-bottom: 4px;
+    padding-bottom: 5px;
 }
 
 .snow {
@@ -67,6 +64,16 @@ body {
     justify-content: center;
     text-align: center;
     padding: 50px;
+    margin-top: 100px;
+    font-size: large;
+}
+
+#main #form {
+    width: 300px;
+}
+
+#main #form form {
+    font-size: 20px;
 }
 
 input[type=text] {
