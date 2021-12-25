@@ -1,7 +1,11 @@
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".links");
-const ul_links = document.querySelectorAll(".links li");
 
-hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-});
+
+document.getElementById("name").required = true;
+document.getElementById("surname").required = true;
+document.getElementById("e-mail").required = true;
+document.getElementById("message").required = true;
+
+function myFunction() {
+    alert("Sent");
+}
+

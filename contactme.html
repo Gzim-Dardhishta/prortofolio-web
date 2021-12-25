@@ -39,7 +39,7 @@
 
     <main id="main">
         <div id="form">
-            <form>
+            <form onsubmit="return myFunction()">
                 <label class="labels" for="name">FirstName</label><br>
                 <input type="text" name="name" id="name" placeholder="Emri"><br>
                 <label class="labels" for="surname">LastName</label><br>
@@ -47,9 +47,9 @@
                 <label for="email">Write your E-mail</label><br>
                 <input type="text" name="e-mail" id="e-mail" placeholder="someone@example.domainname"><br>
                 <label class="labels" for="message">Send me a message via E-mail</label><br>
-                <textarea name="" id="" cols="37" rows="10" placeholder="Type your message..."></textarea><br>
+                <textarea name="" id="message" cols="33" rows="11" placeholder="Type your message..."></textarea><br>
 
-                <input type="submit" value="Send">
+                <input type="submit" id="send" value="Send" onclick="">
             </form>
         </div>
 
@@ -62,5 +62,8 @@
             </ul>
         </div>
     </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
