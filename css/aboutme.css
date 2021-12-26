@@ -74,7 +74,33 @@ body {
     margin-bottom: 10px;
 }
 
+#main h2 {
+    margin-bottom: 10px;
+}
+
 #main p {
     font-size: 18px;
     margin-bottom: 10px;
+}
+
+@media screen and (max-width: 800px) {
+
+    #header {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #header .nav-links ul {
+        display: block;
+    }
+    #header .nav-links ul li {
+        text-align: center;
+    }
+
+    #main {
+        max-width: 500px;
+    }
+
+
+
 }

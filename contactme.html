@@ -39,17 +39,23 @@
 
     <main id="main">
         <div id="form">
-            <form onsubmit="return myFunction()">
+            <form>
                 <label class="labels" for="name">FirstName</label><br>
-                <input type="text" name="name" id="name" placeholder="Emri"><br>
+                <label style="color: red;" id="nameMsg"></label>
+                <input type="text" name="name" id="name" placeholder="Emri">
+                <br>
                 <label class="labels" for="surname">LastName</label><br>
-                <input type="text" name="surname" id="surname" placeholder="Mbiemri"><br>
+                <input type="text" name="surname" id="surname" placeholder="Mbiemri">
+                <br>
                 <label for="email">Write your E-mail</label><br>
-                <input type="text" name="e-mail" id="e-mail" placeholder="someone@example.domainname"><br>
+                <label style="color: red;" id="emailMsg"></label>
+                <input type="text" name="e-mail" id="e-mail" placeholder="someone@example.domainname">
+                <br>
                 <label class="labels" for="message">Send me a message via E-mail</label><br>
+                <label style="color: red;" id="messageMsg"></label>
                 <textarea name="" id="message" cols="33" rows="11" placeholder="Type your message..."></textarea><br>
 
-                <input type="submit" id="send" value="Send" onclick="">
+                <input type="submit" id="send" value="Send" onclick="click">
             </form>
         </div>
 
@@ -63,7 +69,8 @@
         </div>
     </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./js/script.js"></script>
+
+    <script src="./js/validation.js"></script>
+
 </body>
 </html>
