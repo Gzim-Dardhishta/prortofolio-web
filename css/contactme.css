@@ -39,6 +39,11 @@ body {
     font-size: 25px
 }
 
+.nav-links ul li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
 .nav-links ul li a {
     text-decoration: none;
     color: rgb(231, 231, 229);
@@ -234,6 +239,26 @@ input[type=submit]:hover {
 
     #main .social-links {
         margin: auto;
+    }
+
+    #footer .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #footer .content #social-links {
+        flex-direction: row;
+    }
+    #footer .content #social-links .l{
+        margin: 20px;
+    }
+
+    #footer .content .info{
+        margin: 30px;
+    }
+
+    #footer .content .terms {
+        margin: 20px;
     }
 
 }
