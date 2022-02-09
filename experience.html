@@ -19,17 +19,18 @@
         </div>
 
         <nav class="nav-links">
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <ul>
+            <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="aboutme.html">About me</a></li>
                 <li><a href="contactme.html">Contact Me</a></li>
                 <li><a href="" class="is-active">Experiences</a></li>
             </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
 
@@ -39,16 +40,45 @@
 
     <main>
         <div id="main-info">
-            <h2 class="text">this is my portofolio</h2>
+            <h2>this is my portofolio</h2>
 
-            <h3 class="text">For the past years in World of Tech I've learned so many things</h3>
-            <h4 class="text">Here you have the link to my Github Profile</h4>
+            <h3>For the past years in World of Tech I've learned so many things</h3>
+            <h4>Here you have the link to my Github Profile</h4>
         </div>
 
         <div id="git-hub">
             <a href="https://github.com/Gzim-Dardhishta" target="_blank"><i class="fab fa-github"></i><br> Github Profile</a>
         </div>
     </main>
+
+    <div class="slider">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="./img/web.png" style="width: 100%;" alt="">
+                <div class="text">Web</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./img/php-java-python.png" style="width: 100%;" alt="">
+                <div class="text">Programming Language</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./img/sql.png" width="100%" alt="">
+                <div class="text">Database</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+    </div>
 
     <footer id="footer">
         <div class="content">
@@ -88,5 +118,37 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/script.js"></script>
+
+    <!-- JavaScript for the slider -->
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        }
+    </script>
 </body>
 </html>

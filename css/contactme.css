@@ -39,11 +39,6 @@ body {
     font-size: 25px
 }
 
-.nav-links ul li:hover {
-    transform: scale(1.1);
-    transition: 0.3s;
-}
-
 .nav-links ul li a {
     text-decoration: none;
     color: rgb(231, 231, 229);
@@ -51,9 +46,11 @@ body {
     padding-right: 5px;
 }
 
-#header .nav-links ul li a:hover {
-    border-bottom: 2px solid purple;  
+#header .nav-links .nav-menu li a:hover {
+    border-bottom: 3px solid rgb(28, 190, 166);  
     padding-bottom: 5px;
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 #header .nav-links ul li a.is-active {
@@ -213,18 +210,67 @@ input[type=submit]:hover {
     margin-top: 20px;
 }
 
+.hamburger {
+    display: none;
+    position: relative;
+    top: 20px;
+}
+
+.bar {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(231, 231, 229);
+}
+
 @media screen and (max-width: 700px) {
 
-    #header {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    #header .nav-links ul {
-        display: block;
-    }
-    #header .nav-links ul li {
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: rgb(16, 15, 23);
+        width: 100%;
+        height: 100vh;
         text-align: center;
+        transition: 0.3s;
+        z-index: 1;
+        opacity: 0.9;
+    }
+
+    .nav-menu li {
+        margin: 25px;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        color: rgb(231, 231, 229);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     #main {
